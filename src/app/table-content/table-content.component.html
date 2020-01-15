@@ -1,0 +1,47 @@
+<!-- Search form -->
+
+<div class="row">
+    <div class="col-sm-11">
+        <div class="search">
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search">
+        </div>
+    </div>
+    <div class="col-sm-1 add-cog">
+        <button class="icon-cog" [routerLink]="['employee']"> <i class="fa fa-plus fa-2x" aria-hidden="true"></i></button>
+    </div>
+</div>
+<!-- table -->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employeeData | filter:searchText">
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.firstname }}</td>
+            <td>{{ employee.lastname }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{employee.salary}}</td>
+            <td>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <button class="icon-cog" [routerLink]="['employees',employee.id]"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="col-sm-2">
+                        <button class="icon-cog" [routerLink]="['updateEmployee',employee.id]"> <i class=" fa fa-pencil " aria-hidden="true "></i></button>
+                    </div>
+                    <div class="col-sm-2 ">
+                        <button class="icon-cog" [routerLink]="['deleteEmployee',employee.id]"><i class=" fa fa-trash " aria-hidden="true "></i></button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

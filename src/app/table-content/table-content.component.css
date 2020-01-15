@@ -1,0 +1,19 @@
+.icon-cog {
+    color: black;
+    background: transparent;
+    border: none;
+}
+
+.search {
+    max-width: 95%;
+}
+
+.add-cog {
+    padding-left: 34px;
+    padding-top: 4px;
+}
+
+.form-control {
+    border: 1px #ced4da !important;
+    width: 111% !important;
+}

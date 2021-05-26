@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.14",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^4.4.1",
-    "browserslist": "^4.8.3",
+    "browserslist": "^4.16.5",
     "caniuse-lite": "^1.0.30001019",
     "font-awesome": "^4.7.0",
     "ng2-search-filter": "^0.5.1",
